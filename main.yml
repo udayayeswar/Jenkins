@@ -1,0 +1,10 @@
+---
+- name: create file
+  hosts: dev
+
+
+  tasks:
+    - name: add new file
+      ansible.builtin.file:
+        path: /home/centos/hello.txt
+        state: touch
