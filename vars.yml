@@ -31,3 +31,9 @@
 #   - name: print URL
 #     ansible.builtin.debug:
 #       msg: URL == {{URL}}
+
+- name: print fact
+  hosts: all
+  tasks:
+    - ansible.builtin.debug:
+        msg: hostname = {{ansible_hostname}}
