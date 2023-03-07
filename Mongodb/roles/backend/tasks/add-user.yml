@@ -1,0 +1,6 @@
+- name: Add application user
+  ansible.builtin.user:
+    name: "{{user}}"
+  register: app_user_info
+
+
