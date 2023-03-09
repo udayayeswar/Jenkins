@@ -1,6 +1,6 @@
 ---
 - name: create file
-  hosts: dev
+  hosts: all
   tasks:
     - name: add new file
       ansible.builtin.file:
