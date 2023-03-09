@@ -4,5 +4,5 @@
   tasks:
     - name: add new file
       ansible.builtin.file:
-        path: /home/centos/hello.txt
+        path: /home/centos/udaya.txt
         state: touch
