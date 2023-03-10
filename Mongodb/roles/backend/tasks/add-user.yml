@@ -1,6 +1,6 @@
 - name: Add application user
   ansible.builtin.user:
-    name: "{{user}}"
+    name: spec
   register: app_user_info
 
 #  adduser spec
