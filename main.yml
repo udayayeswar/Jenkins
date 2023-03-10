@@ -1,8 +1,6 @@
 ---
-- name: create file
-  hosts: all
-  tasks:
-    - name: add new file
-      ansible.builtin.file:
-        path: /home/centos/udaya.txt
-        state: touch
+- name: "setup for role: {{ROLE}}"
+  hosts: dev
+  become: yes
+  roles:
+    - "{{ROLE}}"
