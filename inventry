@@ -1,2 +1,2 @@
 [dev]
-54.86.200.183 ansible_ssh_extra_args='-o StrictHostKeyChecking=no'
+54.226.69.36 ansible_ssh_extra_args='-o StrictHostKeyChecking=no'
