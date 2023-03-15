@@ -1,0 +1,8 @@
+- name: copy reverse proxy configuration
+  ansible.builtin.copy:
+    src: "{{item.file}}"
+    dest: "{{item.dest}}"
+  loop:
+    - {file: 'nodejs.conf' , dest: '/etc/nginx/conf.d/nodejs.conf' }
+    - {file: 'nginx.conf' , dest: '/etc/nginx/nginx.conf' }
+  notify: restart nginx service
