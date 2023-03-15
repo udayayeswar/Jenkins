@@ -10,5 +10,3 @@
     name:
       - nginx
     state: present
-
-- name: current enforce
