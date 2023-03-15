@@ -1,2 +1,4 @@
 USER: node
 COMPONENT: node-app
+DB_PASS: udaya
+DB_USER: udaya123
