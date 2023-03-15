@@ -1,5 +1,5 @@
 - name: copy reverse proxy configuration
-  ansible.builtin.copy:
+  ansible.builtin.template:
     src: "{{item.file}}"
     dest: "{{item.dest}}"
   loop:
