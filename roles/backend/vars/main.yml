@@ -2,3 +2,6 @@ USER: node
 COMPONENT: node-app
 DB_PASS: udaya
 DB_USER: udaya123
+APP_VERSION: 1.0
+ENV: test
+DB_URL: cluster0.nggvzyx.mongodb.net
