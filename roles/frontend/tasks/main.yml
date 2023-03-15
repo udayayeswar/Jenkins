@@ -15,7 +15,7 @@
 #  ansible.builtin.shell:
 #    cmd: setenforce permissive
 
-- name: enable and start the service
+
 
 - name: download application data
   import_tasks: download.yml
