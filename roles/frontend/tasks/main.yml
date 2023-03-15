@@ -4,3 +4,9 @@
   yum:
     name: epel-release
     state: present
+
+- name: Install Nginx is Install
+  ansible.builtin.yum:
+    name:
+      - nginx
+    state: present
