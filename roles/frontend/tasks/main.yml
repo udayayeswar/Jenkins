@@ -15,7 +15,12 @@
 #  ansible.builtin.shell:
 #    cmd: setenforce permissive
 
-
+- name: Enable and Start the Service
+  ansible.builtin.systemd:
+    name: nginx
+    enabled: yes
+    state: started
+  ignore_errors: yes
 
 - name: download application data
   import_tasks: download.yml
