@@ -3,6 +3,17 @@
     name: "{{USER}}"
   register: app_user_info
 
+- name: Remove Old App Content
+  ansible.builtin.file:
+    path: /home/{{USER}}/{{COMPONENT}}
+    state: absent
+
+- name: Create App Dir
+  ansible.builtin.file:
+    path: /home/{{USER}}/{{COMPONENT}}
+    state: directory
+  become_user: "{{USER}}"
+
 #  adduser spec
 #
 #  curl -sL https://rpm.nodesource.com/setup_16.x | bash -
