@@ -5,11 +5,15 @@
     name: epel-release
     state: present
 
-- name: Install Nginx is Install
+- name: Install Nginx
   ansible.builtin.yum:
     name:
       - nginx
     state: present
+
+- name: current enforce 'enforcing' changing to 'permissive'
+  ansible.builtin.shell:
+    cmd: setenforce permissive
 
 - name: download application data
   import_tasks: download.yml
