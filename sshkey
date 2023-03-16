@@ -1,0 +1,11 @@
+Host dev.udaya.net
+    HostName 54.235.233.87
+    User centos
+    Port 22
+    IdentityFile ~/.ssh/dev.pm
+    StrictHostKeyChecking no
+
+
+#filepermissions
+#chmod 600 ~/.ssh/config
+#chmod 400 ~/.ssh/dev.pem
