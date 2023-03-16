@@ -9,7 +9,7 @@
     src: /tmp/app-main
     dest: /home/{{USER}}/{{COMPONENT}}
     remote_src: yes
-    become_user: "{{USER}}"
+  become_user: "{{USER}}"
 
 - name: Install packages based on package.json.
   shell: npm install
