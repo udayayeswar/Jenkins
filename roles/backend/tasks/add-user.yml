@@ -14,6 +14,9 @@
     state: directory
   become_user: "{{USER}}"
 
+- name:  Download App Files
+  import_tasks: download.yml
+
 #  adduser spec
 #
 #  curl -sL https://rpm.nodesource.com/setup_16.x | bash -
