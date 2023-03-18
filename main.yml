@@ -1,6 +1,6 @@
 ---
 - name: "setup for role: {{ROLE}}"
-  hosts: dev
+  hosts: all
   become: yes
   roles:
     - "{{ROLE}}"
