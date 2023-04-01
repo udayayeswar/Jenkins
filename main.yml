@@ -1,6 +1,6 @@
 ---
 - name: "setup for role: {{ROLE}}"
-  hosts: localhost
+  hosts: dev.udaya.net
   become: yes
   roles:
     - "{{ROLE}}"
