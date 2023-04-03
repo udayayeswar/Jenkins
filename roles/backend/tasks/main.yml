@@ -1,6 +1,6 @@
 - name: Setup NodeJs repo
   shell: curl -sL https://rpm.nodesource.com/setup_16.x | bash -
-  ansible ALL=(ALL) NOPASSWD: ALL
+
 
 - name: Install dependencies
   ansible.builtin.yum:
