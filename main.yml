@@ -1,6 +1,7 @@
 ---
 - name: "setup for role: {{ROLE}}"
-  hosts: dev.udaya.net
+  hosts: localhost
+  gather_facts: false
   become: yes
   roles:
     - "{{ROLE}}"
