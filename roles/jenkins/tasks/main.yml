@@ -2,6 +2,6 @@
   community.general.jenkins_job:
     config: "{{ lookup('file', 'templates/test.xml') }}"
     name: test
-    password: @123Chaitu
+    password: "@123Chaitu"
     url: http://172.16.0.200:8080
     user: admin
