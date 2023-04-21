@@ -1,44 +1,37 @@
 <?xml version='1.1' encoding='UTF-8'?>
-<org.jenkinsci.plugins.workflow.multibranch.WorkflowMultiBranchProject plugin="workflow-multibranch">
-    <actions/>
-    <description></description>
-    <properties/>
-    <folderViews class="jenkins.branch.MultiBranchProjectViewHolder" plugin="branch-api">
-        <owner class="org.jenkinsci.plugins.workflow.multibranch.WorkflowMultiBranchProject" reference="../.."/>
-    </folderViews>
-    <healthMetrics/>
-    <icon class="jenkins.branch.MetadataActionFolderIcon" plugin="branch-api">
-        <owner class="org.jenkinsci.plugins.workflow.multibranch.WorkflowMultiBranchProject" reference="../.."/>
-    </icon>
-    <orphanedItemStrategy class="com.cloudbees.hudson.plugins.folder.computed.DefaultOrphanedItemStrategy" plugin="cloudbees-folder">
-        <pruneDeadBranches>true</pruneDeadBranches>
-        <daysToKeep>-1</daysToKeep>
-        <numToKeep>-1</numToKeep>
-        <abortBuilds>false</abortBuilds>
-    </orphanedItemStrategy>
-    <triggers/>
-    <disabled>false</disabled>
-    <sources class="jenkins.branch.MultiBranchProject$BranchSourceList" plugin="branch-api">
-        <data>
-            <jenkins.branch.BranchSource>
-                <source class="jenkins.plugins.git.GitSCMSource" plugin="git">
-                    <id>31ec3128-2972-4db5-bebe-61c720325fc3</id>
-                    <remote>https://github.com/udayayeswar/{{item.name}}</remote>
-                    <credentialsId></credentialsId>
-                    <traits>
-                        <jenkins.plugins.git.traits.BranchDiscoveryTrait/>
-                        <jenkins.plugins.git.traits.TagDiscoveryTrait/>
-                    </traits>
-                </source>
-                <strategy class="jenkins.branch.DefaultBranchPropertyStrategy">
-                    <properties class="empty-list"/>
-                </strategy>
-            </jenkins.branch.BranchSource>
-        </data>
-        <owner class="org.jenkinsci.plugins.workflow.multibranch.WorkflowMultiBranchProject" reference="../.."/>
-    </sources>
-    <factory class="org.jenkinsci.plugins.workflow.multibranch.WorkflowBranchProjectFactory">
-        <owner class="org.jenkinsci.plugins.workflow.multibranch.WorkflowMultiBranchProject" reference="../.."/>
-        <scriptPath>Jenkinsfile</scriptPath>
-    </factory>
-</org.jenkinsci.plugins.workflow.multibranch.WorkflowMultiBranchProject>
+<flow-definition plugin="workflow-job@1239.v71b_b_a_124a_725">
+<actions>
+    <org.jenkinsci.plugins.pipeline.modeldefinition.actions.DeclarativeJobAction plugin="pipeline-model-definition@2.2114.v2654ca_721309"/>
+    <org.jenkinsci.plugins.pipeline.modeldefinition.actions.DeclarativeJobPropertyTrackerAction plugin="pipeline-model-definition@2.2114.v2654ca_721309">
+        <jobProperties/>
+        <triggers/>
+        <parameters/>
+        <options/>
+    </org.jenkinsci.plugins.pipeline.modeldefinition.actions.DeclarativeJobPropertyTrackerAction>
+</actions>
+<description></description>
+<keepDependencies>false</keepDependencies>
+<properties/>
+<definition class="org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition" plugin="workflow-cps@2802.v5ea_628154b_c2">
+    <scm class="hudson.plugins.git.GitSCM" plugin="git@4.12.1">
+        <configVersion>2</configVersion>
+        <userRemoteConfigs>
+            <hudson.plugins.git.UserRemoteConfig>
+                <url>https://github.com/raghudevopsb67/learning-jenkins</url>
+            </hudson.plugins.git.UserRemoteConfig>
+        </userRemoteConfigs>
+        <branches>
+            <hudson.plugins.git.BranchSpec>
+                <name>*/main</name>
+            </hudson.plugins.git.BranchSpec>
+        </branches>
+        <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+        <submoduleCfg class="empty-list"/>
+        <extensions/>
+    </scm>
+    <scriptPath>Jenkinsfile</scriptPath>
+    <lightweight>true</lightweight>
+</definition>
+<triggers/>
+<disabled>false</disabled>
+</flow-definition>
