@@ -9,9 +9,8 @@
 - name: Create a jenkins multibranch job using basic authentication
   community.general.jenkins_job:
     config: "{{ lookup('file', 'templates/mbranch.xml') }}"
-    name: "{{item.name}}"
+    name: test
     password: "@123Chaitu"
     url: http://34.224.223.136:8080
     user: admin
-  loop:
-    - { name: "backend" }
+
