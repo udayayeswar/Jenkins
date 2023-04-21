@@ -11,18 +11,18 @@ pipeline{
       }
      }
    stage( 'style checks' ) {
-     when {
-       branch 'main'
-     }
+//      when {
+//        branch 'main'
+//      }
       steps{
          echo 'code quality'
          }
         }
 
    stage( 'unit tests' ) {
-     when {
-            branch 'main'
-          }
+//      when {
+//             branch 'main'
+//           }
       steps{
          echo 'unit test'
          }
@@ -30,14 +30,14 @@ pipeline{
 
 
     stage( 'download dependencies' ) {
-        when { tag "*" }
-             steps{
+//         when { tag "*" }
+              steps{
                 echo 'download dependencies'
                 }
                }
 
      stage( 'prepare artifact' ) {
-         when { tag "*"}
+//          when { tag "*"}
                steps{
                   echo 'prepare artifacts'
                   }
