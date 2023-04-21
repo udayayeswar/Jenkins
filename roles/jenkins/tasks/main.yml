@@ -1,17 +1,16 @@
-- name: Create a jenkins multibranch job using basic authentication
+- name: Create a folders
   community.general.jenkins_job:
-    config: "{{ lookup('file', 'templates/test.xml') }}"
-    name: test
-    password: "@123Chaitu"
-    url: http://34.224.223.136:8080
-    user: admin
-
-- name: Create a jenkins multibranch job using basic authentication
-  community.general.jenkins_job:
-    config: "{{ lookup('file', 'templates/mbranch.xml') }}"
+    config: "{{ lookup('file', 'templates/folder.xml') }}"
     name: "{{item.name}}"
     password: "@123Chaitu"
     url: http://34.224.223.136:8080
     user: admin
   loop:
-    - { name: "backend" }
+    - { name: "ci-pipelines"}
+
+- name: Include Multi Branch task file
+  ansible.builtin.include_tasks: mbranch.yml
+  loop:
+    - { name: "node-app"}
+    - { name: "java-app"}
+
