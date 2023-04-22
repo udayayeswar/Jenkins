@@ -10,6 +10,3 @@
     password: "@123Chaitu"
     url: http://34.224.223.136:8080
     user: admin
-  loop:
-    - { name: "node-app" }
-    - { name: "java-app" }
