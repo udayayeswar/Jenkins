@@ -9,7 +9,7 @@
     - { name: "ci-pipelines"}
 
 - name: Include Multi Branch task file
-  ansible.builtin.include_tasks: mbranch.yml
+  ansible.builtin.include_tasks: mbranch.xml
   loop:
     - { name: "node-app"}
     - { name: "java-app"}
